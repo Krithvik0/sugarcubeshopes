@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the dessert collection at Sugar Cubes Hopes." />
+  <title>Sugar Cubes Hopes | Delightful Desserts</title>
+  <link rel="icon" type="image/png" href="assets/sugar-cubes-hopes-logo.png" />
+  <link rel="apple-touch-icon" href="assets/sugar-cubes-hopes-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Sugar Cubes Hopes home">
+      <img src="assets/sugar-cubes-hopes-logo.webp" alt="Sugar Cubes Hopes logo" />
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#menu">Menu</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#gallery">Gallery</a>
+      <a class="nav-link" href="#custom-cakes">Custom Cakes</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <picture>
+          <source srcset="assets/hero-banner-hd.webp" media="(min-width: 900px)" type="image/webp">
+          <source srcset="assets/hero-banner.webp" type="image/webp">
+          <img class="hero-bg-img" src="assets/hero-banner.jpg" alt="Sugar Cubes Hopes Signboard" width="1024" height="576">
+        </picture>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Made with love <span></span></p>
+        <h1>Delightful<br><em>Desserts</em></h1>
+        <p class="hero-description">Cakes, brownies, cookies and more — made with love and premium ingredients.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#menu">Explore Menu <span>→</span></a>
+          <a class="button button-outline" href="#about">Our Story</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise-strip" aria-label="Our highlights">
+      <div class="promise"><span class="promise-icon">✿</span><span>Freshly Made<br>Everyday</span></div>
+      <div class="promise"><span class="promise-icon">♧</span><span>Premium<br>Ingredients</span></div>
+      <div class="promise"><span class="promise-icon">♡</span><span>Custom<br>Cake Designs</span></div>
+      <div class="promise"><span class="promise-icon">✧</span><span>Made with<br>Love</span></div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">Our menu</p>
+          <h2>Dessert <em>Collection</em></h2>
+          <p class="section-intro">Explore our delicious range of cakes, brownies, cookies and more.</p>
+        </div>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter desserts">
+        <button class="filter-btn active" data-filter="signature">★ Signature (Must Try)</button>
+        <button class="filter-btn" data-filter="all">All Items</button>
+        <button class="filter-btn" data-filter="shakes">Shakes</button>
+        <button class="filter-btn" data-filter="tres-leches">Tres Leches</button>
+        <button class="filter-btn" data-filter="cakes">Cakes</button>
+        <button class="filter-btn" data-filter="brownies">Brownies</button>
+        <button class="filter-btn" data-filter="cookies">Cookies</button>
+        <button class="filter-btn" data-filter="platters">Platters</button>
+      </div>
+      <div class="dessert-grid">
+        <!-- 9 Signature / Must Try Items (Visible initially) -->
+        <article class="dessert-card" data-category="tres-leches" data-signature="true">
+          <div class="card-media">
+            <span class="signature-badge">★ Must Try</span>
+            <img src="assets/dishes/classic_tres_leches.webp" alt="Classic Tres Leches" width="500" height="500"
+              loading="eager" decoding="async">
+          </div>
+          <h3>Classic Tres Leches</h3>
+          <button class="details-btn" data-dessert="Classic Tres Leches" data-signature="true">View Details
+            <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="tres-leches" data-signature="true">
+          <div class="card-media">
+            <span class="signature-badge">★ Must Try</span>
+            <img src="assets/dishes/biscoff_tres_leches.webp" alt="Biscoff Tres Leches" width="500" height="500"
+              loading="eager" decoding="async">
+          </div>
+          <h3>Biscoff Tres Leches</h3>
+          <button class="details-btn" data-dessert="Biscoff Tres Leches" data-signature="true">View Details
+            <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="cakes" data-signature="true">
+          <div class="card-media">
+            <span class="signature-badge">★ Must Try</span>
+            <img src="assets/dishes/matilda_cake.webp" alt="Matilda Cake" width="500" height="500" loading="eager"
+              decoding="async">
+          </div>
+          <h3>Matilda Cake</h3>
+          <button class="details-btn" data-dessert="Matilda Cake" data-signature="true">View Details
+            <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="cakes" data-signature="true">
+          <div class="card-media">
+            <span class="signature-badge">★ Must Try</span>
+            <img src="assets/dishes/triple_chocolate_cake.webp" alt="Triple Chocolate Cake" width="500" height="500"
+              loading="eager" decoding="async">
+          </div>
+          <h3>Triple Chocolate Cake</h3>
+          <button class="details-btn" data-dessert="Triple Chocolate Cake" data-signature="true">View Details
+            <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="cakes" data-signature="true">
+          <div class="card-media">
+            <span class="signature-badge">★ Must Try</span>
+            <img src="assets/dishes/tiramisu.webp" alt="Tiramisu" width="500" height="500" loading="lazy"
+              decoding="async">
+          </div>
+          <h3>Tiramisu</h3>
+          <button class="details-btn" data-dessert="Tiramisu" data-signature="true">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="brownies" data-signature="true">
+          <div class="card-media">
+            <span class="signature-badge">★ Must Try</span>
+            <img src="assets/dishes/triple_choco_brownie_cubes.webp" alt="Triple Choco Brownie Cubes" width="500"
+              height="500" loading="lazy" decoding="async">
+          </div>
+          <h3>Triple Choco Brownie Cubes</h3>
+          <button class="details-btn" data-dessert="Triple Choco Brownie Cubes" data-signature="true">View Details
+            <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="brownies" data-signature="true">
+          <div class="card-media">
+            <span class="signature-badge">★ Must Try</span>
+            <img src="assets/dishes/triple_choco_brownie.webp" alt="Triple Choco Brownie" width="500" height="500"
+              loading="lazy" decoding="async">
+          </div>
+          <h3>Triple Choco Brownie</h3>
+          <button class="details-btn" data-dessert="Triple Choco Brownie" data-signature="true">View Details
+            <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="shakes" data-signature="true">
+          <div class="card-media">
+            <span class="signature-badge">★ Must Try</span>
+            <img src="assets/dishes/biscoff_shake.webp" alt="Biscoff Shake" width="500" height="500" loading="lazy"
+              decoding="async">
+          </div>
+          <h3>Biscoff Shake</h3>
+          <button class="details-btn" data-dessert="Biscoff Shake" data-signature="true">View Details
+            <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="platters" data-signature="true">
+          <div class="card-media">
+            <span class="signature-badge">★ Must Try</span>
+            <img src="assets/dishes/triple_delight_platter.webp" alt="Triple Delight Platter" width="500" height="500"
+              loading="lazy" decoding="async">
+          </div>
+          <h3>Triple Delight Platter</h3>
+          <button class="details-btn" data-dessert="Triple Delight Platter" data-signature="true">View Details
+            <span>→</span></button>
+        </article>
+
+        <!-- Additional Shakes (All Shakes Items Included) -->
+        <article class="dessert-card" data-category="shakes" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/nutella_shake.webp" alt="Nutella Shake" width="500" height="500" loading="lazy"
+              decoding="async">
+          </div>
+          <h3>Nutella Shake</h3>
+          <button class="details-btn" data-dessert="Nutella Shake">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="shakes" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/cold_milo.webp" alt="Cold Milo Shake" width="500" height="500" loading="lazy"
+              decoding="async">
+          </div>
+          <h3>Cold Milo</h3>
+          <button class="details-btn" data-dessert="Cold Milo">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="shakes" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/strawberry_shake.webp" alt="Strawberry Shake" width="500" height="500"
+              loading="lazy" decoding="async">
+          </div>
+          <h3>Strawberry Shake</h3>
+          <button class="details-btn" data-dessert="Strawberry Shake">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="shakes" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/brownie_shake.webp" alt="Brownie Shake" width="500" height="500" loading="lazy"
+              decoding="async">
+          </div>
+          <h3>Brownie Shake</h3>
+          <button class="details-btn" data-dessert="Brownie Shake">View Details <span>→</span></button>
+        </article>
+
+        <!-- Additional Menu Items from Official Menu -->
+        <article class="dessert-card" data-category="tres-leches" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/rose_milk_tres_leches.webp" alt="Rose milk Tres Leches" width="500" height="500"
+              loading="lazy" decoding="async">
+          </div>
+          <h3>Rose milk Tres Leches</h3>
+          <button class="details-btn" data-dessert="Rose milk Tres Leches">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="tres-leches" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/mango_tres_leches.webp" alt="Mango Tres Leches" width="500" height="500"
+              loading="lazy" decoding="async">
+          </div>
+          <h3>Mango Tres Leches (Seasonal)</h3>
+          <button class="details-btn" data-dessert="Mango Tres Leches (Seasonal)">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="cakes" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/cheesecake.webp" alt="Cheesecake" width="500" height="500" loading="lazy"
+              decoding="async">
+          </div>
+          <h3>Cheesecake (Classic/Nutella)</h3>
+          <button class="details-btn" data-dessert="Cheesecake">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="cakes" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/london_caramel_cake.webp" alt="London Caramell Cake" width="500" height="500"
+              loading="lazy" decoding="async">
+          </div>
+          <h3>London Caramell Cake</h3>
+          <button class="details-btn" data-dessert="London Caramell Cake">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="brownies" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/classic_brownie.webp" alt="Classic Brownie" width="500" height="500" loading="lazy"
+              decoding="async">
+          </div>
+          <h3>Classic Brownie</h3>
+          <button class="details-btn" data-dessert="Classic Brownie">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="brownies" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/hot_chocolate_brownie.webp" alt="Hot Chocolate Brownie" width="500" height="500"
+              loading="lazy" decoding="async">
+          </div>
+          <h3>Hot Chocolate Brownie</h3>
+          <button class="details-btn" data-dessert="Hot Chocolate Brownie">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="brownies" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/triple_chocolate_strawberry.webp" alt="Triple Chocolate Strawberry" width="500"
+              height="500" loading="lazy" decoding="async">
+          </div>
+          <h3>Triple Chocolate Strawberry</h3>
+          <button class="details-btn" data-dessert="Triple Chocolate Strawberry">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="cookies" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/hot_chocolate_cookies.webp" alt="Hot Chocolate with Cookies" width="500"
+              height="500" loading="lazy" decoding="async">
+          </div>
+          <h3>Hot Chocolate with Cookies</h3>
+          <button class="details-btn" data-dessert="Hot Chocolate with Cookies">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="cookies" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/scoop_cookie.webp" alt="Scoop Cookie" width="500" height="500" loading="lazy"
+              decoding="async">
+          </div>
+          <h3>Scoop Cookie</h3>
+          <button class="details-btn" data-dessert="Scoop Cookie">View Details <span>→</span></button>
+        </article>
+
+        <article class="dessert-card" data-category="cookies" hidden>
+          <div class="card-media">
+            <img src="assets/dishes/scoop_cookie_ice_cream.webp" alt="Scoop Cookie Ice-cream" width="500" height="500"
+              loading="lazy" decoding="async">
+          </div>
+          <h3>Scoop Cookie Ice-cream</h3>
+          <button class="details-btn" data-dessert="Scoop Cookie Ice-cream">View Details <span>→</span></button>
+        </article>
+      </div>
+      <div class="menu-action-row">
+        <button class="button button-gold show-all-btn">Explore Full Menu (23 Items) <span>→</span></button>
+      </div>
+      <p class="menu-note">Dessert selection may vary. Contact us to know more about a dessert.</p>
+    </section>
+
+    <section class="about-section section" id="about">
+      <div class="about-photo">
+        <img src="assets/shopeimage.webp" alt="Sugar Cubes Hopes Storefront & Ambiance" loading="lazy" width="995" height="1281">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow dark">About Sugar Cubes</p>
+        <h2>Our <em>Sweet Story</em></h2>
+        <p>Sugar Cubes began its journey with a passion for creating delicious and memorable dessert experiences. Our main branch is located in R.S. Puram, Coimbatore.</p>
+        <p>Expanding our sweet journey, Sugar Cubes Hopes opened its doors on <strong>23rd October 2026</strong>. Born from a passion for baking and a love for sweet creations, Sugar Cubes Hopes crafts fresh, high-quality desserts using premium and natural ingredients to make everyday moments more special.</p>
+        <div class="about-map-action">
+          <a class="map-direct-card" href="https://www.google.com/maps/place/Sugar+Cubes+Hopes/@11.0249346,77.0147336,191m/data=!3m1!1e3!4m15!1m8!3m7!1s0x3ba8571676d35643:0x2f7c8d11ca114391!2sNR+Complex,+226,+Avinashi+Rd,+Peelamedu,+Hope+College,+Coimbatore,+Tamil+Nadu+641004!3b1!8m2!3d11.0252969!4d77.0157427!16s%2Fg%2F11v5b_f4lv!3m5!1s0x3ba857001f09fc55:0xe1ee8edb094f3f!8m2!3d11.025394!4d77.0153675!16s%2Fg%2F11p2b5v1_v?entry=ttu" target="_blank" rel="noopener" aria-label="Open Sugar Cubes Hopes on Google Maps">
+            <span class="map-icon-circle">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+                <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle fill="#FFFFFF" cx="12" cy="9" r="2.8"/>
+              </svg>
+            </span>
+            <div class="map-card-text">
+              <span class="map-card-badge">Google Maps Location</span>
+              <strong>Sugar Cubes Hopes</strong>
+              <p>NR Complex, Avinashi Rd, Peelamedu, Hope College, Coimbatore – 641004</p>
+              <span class="map-tap-hint">Tap here for Directions on Google Maps <span>→</span></span>
+            </div>
+          </a>
+        </div>
+        <p class="tagline">Every dessert is made to make your moments a little sweeter!</p>
+      </div>
+    </section>
+
+    <section class="gallery-section section" id="gallery">
+      <div class="section-heading centered">
+        <p class="eyebrow dark">Gallery</p>
+        <h2>A Peek Into Our <em>Sweet World</em></h2>
+        <p>A little look at the treats handcrafted to brighten your day.</p>
+      </div>
+      <div class="gallery-grid">
+        <img src="assets/dishes/classic_tres_leches.webp" alt="Classic Tres Leches" width="500" height="500" loading="lazy">
+        <img src="assets/dishes/biscoff_tres_leches.webp" alt="Biscoff Tres Leches" width="500" height="500" loading="lazy">
+        <img src="assets/dishes/matilda_cake.webp" alt="Matilda Cake" width="500" height="500" loading="lazy">
+        <img src="assets/dishes/triple_chocolate_cake.webp" alt="Triple Chocolate Cake" width="500" height="500" loading="lazy">
+        <img src="assets/dishes/tiramisu.webp" alt="Tiramisu" width="500" height="500" loading="lazy">
+        <img src="assets/dishes/triple_choco_brownie_cubes.webp" alt="Triple Choco Brownie Cubes" width="500" height="500" loading="lazy">
+        <img src="assets/dishes/triple_delight_platter.webp" alt="Triple Delight Platter" width="500" height="500" loading="lazy">
+        <img src="assets/shopeimage.webp" alt="Sugar Cubes Shopfront" width="500" height="500" loading="lazy">
+      </div>
+    </section>
+
+    <section class="custom-section section" id="custom-cakes">
+      <div class="custom-image">
+        <img src="assets/celebration_cake.webp" alt="Sugar Cubes Handcrafted Celebration Cake" loading="lazy" width="710" height="652">
+      </div>
+      <div class="custom-copy">
+        <p class="eyebrow dark">Custom cakes</p>
+        <h2>Cakes for Your <em>Special Moments</em></h2>
+        <p>Celebrate birthdays, anniversaries, weddings and every special occasion with personalized handcrafted cake designs from Sugar Cubes Hopes.</p>
+        <div class="occasion-list">
+          <span>♡ Birthday Cakes</span><span>♡ Anniversary Cakes</span><span>♡ Theme Cakes</span><span>♡ Custom Designs</span>
+        </div>
+        <a class="button button-brown" href="#contact">Enquire About Custom Cakes <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div class="contact-copy">
+        <p class="eyebrow dark">Contact us</p>
+        <h2>Get in <em>Touch</em></h2>
+        <p>Have a question or a custom cake enquiry? We'd love to hear from you.</p>
+        <a class="contact-detail contact-map-card" href="https://www.google.com/maps/place/Sugar+Cubes+Hopes/@11.0249346,77.0147336,191m/data=!3m1!1e3!4m15!1m8!3m7!1s0x3ba8571676d35643:0x2f7c8d11ca114391!2sNR+Complex,+226,+Avinashi+Rd,+Peelamedu,+Hope+College,+Coimbatore,+Tamil+Nadu+641004!3b1!8m2!3d11.0252969!4d77.0157427!16s%2Fg%2F11v5b_f4lv!3m5!1s0x3ba857001f09fc55:0xe1ee8edb094f3f!8m2!3d11.025394!4d77.0153675!16s%2Fg%2F11p2b5v1_v?entry=ttu" target="_blank" rel="noopener" aria-label="Open Sugar Cubes Hopes on Google Maps">
+          <span class="map-pin-badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle fill="#FFFFFF" cx="12" cy="9" r="2.8"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Sugar Cubes Hopes ↗</strong>
+            <p>NR Complex, Avinashi Rd, Peelamedu, Hope College, Coimbatore - 641004</p>
+            <span class="map-click-note">Touch to open in Google Maps</span>
+          </div>
+        </a>
+        <a class="contact-detail contact-map-card" href="https://www.google.com/maps/search/?api=1&query=Sugar+Cubes+RS+Puram+Coimbatore" target="_blank" rel="noopener" aria-label="Open Sugar Cubes RS Puram on Google Maps">
+          <span class="map-pin-badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle fill="#FFFFFF" cx="12" cy="9" r="2.8"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Main Branch (R.S. Puram) ↗</strong>
+            <p>R.S. Puram, Coimbatore</p>
+            <span class="map-click-note">Touch to open in Google Maps</span>
+          </div>
+        </a>
+        <div class="contact-detail"><span>♡</span>
+          <div><strong>Instagram</strong><br><a href="https://instagram.com/hopes_desserts_cde" target="_blank" rel="noopener">@hopes_desserts_cde</a></div>
+        </div>
+      </div>
+      <form class="contact-form" id="enquiry-form">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us what you're looking for..." required></textarea>
+        <button class="button button-gold" type="submit">Send Enquiry <span>→</span></button>
+        <p class="form-note" id="form-note" aria-live="polite">Demo form: connect it to your email or backend to receive enquiries.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col footer-col-brand">
+        <a class="footer-brand" href="#home" aria-label="Sugar Cubes Hopes home">
+          <img src="assets/sugar-cubes-hopes-logo.webp" alt="Sugar Cubes Hopes logo" width="70" height="70" loading="lazy">
+          <div class="footer-brand-text">
+            <span class="footer-brand-name">SUGAR CUBES</span>
+            <span class="footer-brand-tag">HOPES · DESSERTS & MORE</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Crafting fresh, artisanal desserts, shakes, cakes, and celebration platters using natural premium ingredients and love.
+        </p>
+        <div class="footer-badges">
+          <span class="badge-item">✿ Fresh Daily</span>
+          <span class="badge-item">♧ 100% Premium</span>
+          <span class="badge-item">♡ Custom Cakes</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Dessert Menu</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#gallery">Dessert Gallery</a></li>
+          <li><a href="#custom-cakes">Custom Cakes</a></li>
+          <li><a href="#contact">Contact & Enquiries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Dessert Menu</h3>
+        <ul class="footer-links">
+          <li><a href="#menu" data-footer-filter="signature">★ Signature (Must Try)</a></li>
+          <li><a href="#menu" data-footer-filter="shakes">Specialty Shakes</a></li>
+          <li><a href="#menu" data-footer-filter="tres-leches">Tres Leches</a></li>
+          <li><a href="#menu" data-footer-filter="cakes">Artisan Cakes & Slices</a></li>
+          <li><a href="#menu" data-footer-filter="brownies">Brownie Cubes</a></li>
+          <li><a href="#menu" data-footer-filter="platters">Celebration Platters</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-contact">
+        <h3 class="footer-heading">Visit Us</h3>
+        <a class="footer-info-item footer-map-item" href="https://www.google.com/maps/place/Sugar+Cubes+Hopes/@11.0249346,77.0147336,191m/data=!3m1!1e3!4m15!1m8!3m7!1s0x3ba8571676d35643:0x2f7c8d11ca114391!2sNR+Complex,+226,+Avinashi+Rd,+Peelamedu,+Hope+College,+Coimbatore,+Tamil+Nadu+641004!3b1!8m2!3d11.0252969!4d77.0157427!16s%2Fg%2F11v5b_f4lv!3m5!1s0x3ba857001f09fc55:0xe1ee8edb094f3f!8m2!3d11.025394!4d77.0153675!16s%2Fg%2F11p2b5v1_v?entry=ttu" target="_blank" rel="noopener" aria-label="Open Sugar Cubes Hopes on Google Maps">
+          <span class="footer-info-icon footer-pin-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle fill="#FFFFFF" cx="12" cy="9" r="2.8"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Sugar Cubes Hopes ↗</strong>
+            <p>NR Complex, Avinashi Rd, Peelamedu, Hope College, Coimbatore 641004</p>
+          </div>
+        </a>
+        <a class="footer-info-item footer-map-item" href="https://www.google.com/maps/search/?api=1&query=Sugar+Cubes+RS+Puram+Coimbatore" target="_blank" rel="noopener" aria-label="Open Sugar Cubes RS Puram on Google Maps">
+          <span class="footer-info-icon footer-pin-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle fill="#FFFFFF" cx="12" cy="9" r="2.8"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Main Branch (R.S. Puram) ↗</strong>
+            <p>R.S. Puram, Coimbatore</p>
+          </div>
+        </a>
+        <div class="footer-info-item">
+          <span class="footer-info-icon">⏱</span>
+          <div>
+            <strong>Opening Hours</strong>
+            <p>11:00 AM – 11:00 PM (Everyday)</p>
+          </div>
+        </div>
+        <div class="footer-info-item">
+          <span class="footer-info-icon">♡</span>
+          <div>
+            <strong>Instagram</strong>
+            <p><a href="https://instagram.com/hopes_desserts_cde" target="_blank" rel="noopener">@hopes_desserts_cde</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Sugar Cubes Hopes. All rights reserved. Made with love in Coimbatore.</p>
+      <div class="footer-bottom-actions">
+        <span class="footer-heart">Every dessert makes a moment sweeter!</span>
+        <a class="back-to-top" href="#home" aria-label="Back to top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="details-dialog" id="details-dialog">
+    <button class="dialog-close" aria-label="Close details">×</button>
+    <p class="eyebrow dark" id="dialog-eyebrow">Sugar Cubes Hopes</p>
+    <h2 id="dialog-title">Dessert details</h2>
+    <p id="dialog-description">Freshly prepared with love and premium ingredients. Available at Sugar Cubes Hopes,
+      Coimbatore.</p>
+    <a class="button button-gold dialog-enquire-btn" href="#contact">Enquire / Order <span>→</span></a>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
