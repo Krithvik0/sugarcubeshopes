@@ -1,0 +1,25 @@
+{
+  "name": "Sugar Cubes Hopes",
+  "short_name": "Sugar Cubes",
+  "description": "Discover delightful desserts, artisan cakes, brownies and shakes at Sugar Cubes Hopes, Coimbatore.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFF8ED",
+  "theme_color": "#582D0D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/sugar-cubes-hopes-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/sugar-cubes-hopes-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
