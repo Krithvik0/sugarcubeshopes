@@ -131,7 +131,7 @@ if (dialogEnquireBtn) {
   });
 }
 
-// WhatsApp enquiry form handler
+// Email enquiry form handler
 const enquiryForm = document.querySelector("#enquiry-form");
 if (enquiryForm) {
   enquiryForm.addEventListener("submit", (event) => {
@@ -141,22 +141,23 @@ if (enquiryForm) {
     const message = document.querySelector("#message").value.trim();
     const note = document.querySelector("#form-note");
 
-    const phoneNumber = "919698970896";
-    const text = `Hello Sugar Cubes Hopes!\n\nI have an enquiry:\n• *Name:* ${name}\n• *Email:* ${email}\n• *Message:* ${message}`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+    const recipient = "sugarcubes2326@gmail.com";
+    const subject = `Sugar Cubes Enquiry from ${name}`;
+    const body = `Hello Sugar Cubes Hopes team,\n\nI have an enquiry:\n• Name: ${name}\n• Email: ${email}\n\nMessage:\n${message}\n\nThank you!`;
+    const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     if (note) {
-      note.textContent = "Opening WhatsApp to send your enquiry...";
+      note.textContent = "Opening your email app to send the enquiry...";
     }
 
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    window.location.href = mailtoUrl;
 
     setTimeout(() => {
       enquiryForm.reset();
       if (note) {
-        note.textContent = "Thank you! Your enquiry has been forwarded to WhatsApp (+91 96989 70896).";
+        note.textContent = "Thank you! Your enquiry has been prepared for sugarcubes2326@gmail.com.";
       }
-    }, 800);
+    }, 1000);
   });
 }
 
