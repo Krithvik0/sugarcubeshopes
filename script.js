@@ -307,7 +307,6 @@ window.addEventListener("appinstalled", () => {
   const prevBtn = document.querySelector("#cake-prev-btn");
   const nextBtn = document.querySelector("#cake-next-btn");
   const dots = document.querySelectorAll(".cake-dot");
-  const thumbs = document.querySelectorAll(".cake-thumb");
   const container = document.querySelector("#cake-slider");
 
   if (!track || slides.length === 0) return;
@@ -322,10 +321,6 @@ window.addEventListener("appinstalled", () => {
 
     dots.forEach((dot, i) => {
       dot.classList.toggle("active", i === currentIndex);
-    });
-
-    thumbs.forEach((thumb, i) => {
-      thumb.classList.toggle("active", i === currentIndex);
     });
   }
 
@@ -343,13 +338,6 @@ window.addEventListener("appinstalled", () => {
   dots.forEach((dot) => {
     dot.addEventListener("click", () => {
       const idx = parseInt(dot.dataset.index, 10);
-      updateSlider(idx);
-    });
-  });
-
-  thumbs.forEach((thumb) => {
-    thumb.addEventListener("click", () => {
-      const idx = parseInt(thumb.dataset.index, 10);
       updateSlider(idx);
     });
   });
