@@ -596,6 +596,209 @@
    box-shadow: 0 16px 40px rgba(69, 35, 10, .14);
  }
 
+ /* ==========================================================================
+    Premium Cakes Interactive Slider
+    ========================================================================== */
+ .custom-slider-wrapper {
+   position: relative;
+   width: 100%;
+   max-width: 520px;
+   margin: 0 auto;
+ }
+
+ .cake-slider-container {
+   position: relative;
+   width: 100%;
+   border-radius: 24px;
+   overflow: hidden;
+   box-shadow: 0 16px 40px rgba(69, 35, 10, 0.16);
+   background: #f8ecde;
+   aspect-ratio: 1 / 1;
+ }
+
+ .cake-slides-track {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+   will-change: transform;
+ }
+
+ .cake-slide {
+   position: relative;
+   min-width: 100%;
+   height: 100%;
+   overflow: hidden;
+ }
+
+ .cake-slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   user-select: none;
+   -webkit-user-drag: none;
+ }
+
+ .slide-badge {
+   position: absolute;
+   bottom: 20px;
+   left: 20px;
+   background: rgba(43, 20, 6, 0.85);
+   backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(8px);
+   color: #F6C15C;
+   font-size: 0.82rem;
+   font-weight: 600;
+   letter-spacing: 0.06em;
+   text-transform: uppercase;
+   padding: 6px 14px;
+   border-radius: 999px;
+   border: 1px solid rgba(246, 193, 92, 0.35);
+   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+   pointer-events: none;
+ }
+
+ /* Navigation Buttons */
+ .cake-nav-btn {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   background: rgba(255, 255, 255, 0.88);
+   backdrop-filter: blur(6px);
+   -webkit-backdrop-filter: blur(6px);
+   border: 1px solid rgba(217, 149, 34, 0.3);
+   color: #582D0D;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   z-index: 5;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+   transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+ }
+
+ .cake-nav-btn:hover {
+   background: #582D0D;
+   color: #F6C15C;
+   transform: translateY(-50%) scale(1.08);
+   box-shadow: 0 6px 20px rgba(88, 45, 13, 0.35);
+ }
+
+ .cake-nav-btn:active {
+   transform: translateY(-50%) scale(0.96);
+ }
+
+ .cake-nav-btn.prev-btn {
+   left: 12px;
+ }
+
+ .cake-nav-btn.next-btn {
+   right: 12px;
+ }
+
+ /* Dots */
+ .cake-dots {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   display: flex;
+   gap: 8px;
+   z-index: 5;
+   background: rgba(43, 20, 6, 0.65);
+   backdrop-filter: blur(6px);
+   -webkit-backdrop-filter: blur(6px);
+   padding: 6px 10px;
+   border-radius: 999px;
+   border: 1px solid rgba(246, 193, 92, 0.25);
+ }
+
+ .cake-dot {
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: rgba(255, 255, 255, 0.45);
+   border: none;
+   padding: 0;
+   cursor: pointer;
+   transition: background 0.25s ease, transform 0.25s ease, width 0.25s ease;
+ }
+
+ .cake-dot.active {
+   background: #F6C15C;
+   width: 20px;
+   border-radius: 999px;
+ }
+
+ /* Thumbnail Strip */
+ .cake-thumbs {
+   display: flex;
+   gap: 12px;
+   justify-content: center;
+   margin-top: 14px;
+ }
+
+ .cake-thumb {
+   width: 68px;
+   height: 68px;
+   border-radius: 14px;
+   overflow: hidden;
+   padding: 0;
+   border: 2px solid transparent;
+   background: none;
+   cursor: pointer;
+   opacity: 0.65;
+   transition: opacity 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+   box-shadow: 0 4px 12px rgba(69, 35, 10, 0.08);
+ }
+
+ .cake-thumb img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+ }
+
+ .cake-thumb:hover {
+   opacity: 0.9;
+   transform: translateY(-2px);
+ }
+
+ .cake-thumb.active {
+   opacity: 1;
+   border-color: #d99522;
+   box-shadow: 0 6px 18px rgba(217, 149, 34, 0.35);
+   transform: translateY(-2px);
+ }
+
+ @media (max-width: 480px) {
+   .cake-nav-btn {
+     width: 38px;
+     height: 38px;
+   }
+   .slide-badge {
+     bottom: 14px;
+     left: 14px;
+     font-size: 0.72rem;
+     padding: 5px 10px;
+   }
+   .cake-dots {
+     bottom: 14px;
+     right: 14px;
+   }
+   .cake-thumb {
+     width: 56px;
+     height: 56px;
+     border-radius: 12px;
+   }
+   .cake-thumbs {
+     gap: 8px;
+   }
+ }
+
  .about-copy p:not(.eyebrow),
  .custom-copy>p:not(.eyebrow),
  .contact-copy>p:not(.eyebrow) {

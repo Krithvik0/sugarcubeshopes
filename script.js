@@ -299,3 +299,99 @@ window.addEventListener("appinstalled", () => {
   if (footerInstallBtn) footerInstallBtn.hidden = true;
   deferredInstallPrompt = null;
 });
+
+// Premium Cakes Carousel / Slider
+(function initCakeSlider() {
+  const track = document.querySelector("#cake-track");
+  const slides = document.querySelectorAll(".cake-slide");
+  const prevBtn = document.querySelector("#cake-prev-btn");
+  const nextBtn = document.querySelector("#cake-next-btn");
+  const dots = document.querySelectorAll(".cake-dot");
+  const thumbs = document.querySelectorAll(".cake-thumb");
+  const container = document.querySelector("#cake-slider");
+
+  if (!track || slides.length === 0) return;
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  let autoplayTimer = null;
+
+  function updateSlider(index) {
+    currentIndex = (index + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+
+    thumbs.forEach((thumb, i) => {
+      thumb.classList.toggle("active", i === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    updateSlider(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    updateSlider(currentIndex - 1);
+  }
+
+  if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+  if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const idx = parseInt(dot.dataset.index, 10);
+      updateSlider(idx);
+    });
+  });
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      const idx = parseInt(thumb.dataset.index, 10);
+      updateSlider(idx);
+    });
+  });
+
+  // Touch Swipe gestures for smartphones
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  if (container) {
+    container.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoplay();
+    }, { passive: true });
+
+    container.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+      startAutoplay();
+    }, { passive: true });
+
+    container.addEventListener("mouseenter", stopAutoplay);
+    container.addEventListener("mouseleave", startAutoplay);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(nextSlide, 4000);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  startAutoplay();
+})();

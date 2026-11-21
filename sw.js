@@ -9,7 +9,11 @@ const ASSETS_TO_CACHE = [
   './assets/sugar-cubes-hopes-logo.png',
   './assets/shopeimage.webp',
   './assets/celebration_cake.webp',
-  './assets/hero-banner-mobile.webp'
+  './assets/hero-banner-mobile.webp',
+  './assets/cake-slide-1.webp',
+  './assets/cake-slide-2.webp',
+  './assets/cake-slide-3.webp',
+  './assets/cake-slide-4.webp'
 ];
 
 self.addEventListener('install', (event) => {

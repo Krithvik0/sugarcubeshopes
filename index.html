@@ -443,9 +443,59 @@
 
     <section class="custom-section section" id="custom-cakes">
       <span id="premium-cakes" style="position: absolute; top: -90px;"></span>
-      <div class="custom-image">
-        <img src="assets/celebration_cake.webp" alt="Sugar Cubes Handcrafted Celebration Birthday Cake" loading="lazy"
-          width="736" height="736">
+      <div class="custom-slider-wrapper">
+        <div class="cake-slider-container" id="cake-slider" aria-label="Premium Cake Showcase">
+          <div class="cake-slides-track" id="cake-track">
+            <div class="cake-slide">
+              <img src="assets/cake-slide-1.webp" alt="Sugar Cubes Birthday Celebration Cake" loading="lazy" width="800" height="800">
+              <span class="slide-badge">Birthday Celebration</span>
+            </div>
+            <div class="cake-slide">
+              <img src="assets/cake-slide-2.webp" alt="Sugar Cubes Luxury Father's Day & Theme Cake" loading="lazy" width="800" height="800">
+              <span class="slide-badge">Luxury Theme Cake</span>
+            </div>
+            <div class="cake-slide">
+              <img src="assets/cake-slide-3.webp" alt="Sugar Cubes Choco Chip Celebration Cake" loading="lazy" width="800" height="800">
+              <span class="slide-badge">Choco Chip Special</span>
+            </div>
+            <div class="cake-slide">
+              <img src="assets/cake-slide-4.webp" alt="Sugar Cubes Heart Anniversary Cake" loading="lazy" width="800" height="800">
+              <span class="slide-badge">Anniversary Heart Cake</span>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button class="cake-nav-btn prev-btn" id="cake-prev-btn" aria-label="Previous Cake">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="cake-nav-btn next-btn" id="cake-next-btn" aria-label="Next Cake">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <!-- Dot Indicators -->
+          <div class="cake-dots" id="cake-dots">
+            <button class="cake-dot active" data-index="0" aria-label="Slide 1"></button>
+            <button class="cake-dot" data-index="1" aria-label="Slide 2"></button>
+            <button class="cake-dot" data-index="2" aria-label="Slide 3"></button>
+            <button class="cake-dot" data-index="3" aria-label="Slide 4"></button>
+          </div>
+        </div>
+
+        <!-- Thumbnail Navigation Strip -->
+        <div class="cake-thumbs" id="cake-thumbs">
+          <button class="cake-thumb active" data-index="0" aria-label="View Cake 1">
+            <img src="assets/cake-slide-1.webp" alt="Thumbnail 1" width="70" height="70">
+          </button>
+          <button class="cake-thumb" data-index="1" aria-label="View Cake 2">
+            <img src="assets/cake-slide-2.webp" alt="Thumbnail 2" width="70" height="70">
+          </button>
+          <button class="cake-thumb" data-index="2" aria-label="View Cake 3">
+            <img src="assets/cake-slide-3.webp" alt="Thumbnail 3" width="70" height="70">
+          </button>
+          <button class="cake-thumb" data-index="3" aria-label="View Cake 4">
+            <img src="assets/cake-slide-4.webp" alt="Thumbnail 4" width="70" height="70">
+          </button>
+        </div>
       </div>
       <div class="custom-copy">
         <p class="eyebrow dark">Premium cakes</p>
